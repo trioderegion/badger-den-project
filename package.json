@@ -1,0 +1,25 @@
+{
+  "name": "badger-den-project",
+  "version": "1.0.0",
+  "description": "Example project template for creating FVTT projects with Badger Den",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trioderegion/badger-den-project.git"
+  },
+  "keywords": [
+    "template",
+    "fvtt",
+    "foundry",
+    "badger-den",
+    "rollup"
+  ],
+  "author": "trioderegion",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trioderegion/badger-den-project/issues"
+  },
+  "homepage": "https://github.com/trioderegion/badger-den-project#readme"
+}
