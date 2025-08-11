@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/trioderegion/badger-den-project#readme",
   "devDependencies": {
-    "rollup-config-badger-den": "^1.7.0"
+    "rollup-config-badger-den": "^1.7.1"
   }
 }
