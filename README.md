@@ -1,5 +1,5 @@
 # Badger Den Template Project
-Template repository for quickstarting FVTT development using the "Badger Den" Rollup plugin.
+Template repository for quickstarting FVTT development using the [Badger Den](https://trioderegion.github.io/rollup-config-badger-den/) Rollup plugin.
 
 ## Setup
 After cloning this repo or one using this as a template, the following commands will build the included "Hello World" module ready for use in Foundry.
