@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Example project template for creating FVTT projects with Badger Den",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "rollup -c node:rollup-config-badger-den -w --config-den src/badger-den-project:dev",
+    "dev-once": "rollup -c node:rollup-config-badger-den --config-den src/badger-den-project:dev",
+    "test": "rollup -c node:rollup-config-badger-den --config-den src/badger-den-project:test",
+    "release": "rollup -c node:rollup-config-badger-den --config-den src/badger-den-project:release"
   },
   "repository": {
     "type": "git",
@@ -21,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/trioderegion/badger-den-project/issues"
   },
-  "homepage": "https://github.com/trioderegion/badger-den-project#readme"
+  "homepage": "https://github.com/trioderegion/badger-den-project#readme",
+  "devDependencies": {
+    "rollup-config-badger-den": "^1.7.0"
+  }
 }

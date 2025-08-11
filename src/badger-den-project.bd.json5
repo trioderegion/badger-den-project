@@ -1,0 +1,62 @@
+{
+  /* "id" is Populated as this file's name (sans ".bd.json") 
+  *  if not explicitly provided. */
+  //id: "badger-den-project",
+  "version": "1.0.0",
+  "title": "Badger Den Demo Project",
+  "description": "Demonstration module built from the Badger Den",
+  /* May prepend lookup path with 'config', but not required */
+  "projectUrl": "%config.authors.0.url%/%id%",
+  "authors": [
+    {
+      "name": "trioderegion",
+      /* Can access array values with 'dot-index' notation */
+      "url": "https://www.github.com/%authors.0.name%"
+    }
+  ],
+  "entryPoints": {
+    /* Treat any module script in this directory as an entry point */
+    "main": "*.mjs",
+    /* Glob expressions resulting in empty sets handled without issue */
+    "lang": "lang/*",
+    "templates": "templates/**",
+  },
+  "package": {
+    "name":"%config.id%-%config.version%",
+    "protected": false,
+    /* Can safely reference paths containing their own
+    *  config substitutions (recursive lookup) */
+    "manifest": "%projectUrl%/releases/download/%version%/module.json",
+    "download": "%projectUrl%/releases/download/%version%/%package.name%.zip"
+  },
+  /* All paths are relative to _this_ file. Place build artifacts
+  *  one level up (e.g. root folder) */
+  "dest":"../dist",
+  "profile": {
+    "dev": {
+      "compress":false,
+      "sourcemaps": true,
+      "clean": false,
+      "hmr": true
+    },
+    "test": {
+      "compress": true,
+      "sourcemaps": true,
+      "clean": true
+    },
+    "release": {
+      "compress": true,
+      "sourcemaps": false,
+      "clean": true,
+      "package": {
+        "create": true,
+        "protected": false
+      }
+    }
+  },
+  "dependencies": {
+    "core": [
+      13, 13 
+    ]
+  },
+}
